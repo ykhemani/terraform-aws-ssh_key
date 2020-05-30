@@ -9,12 +9,8 @@ variable owner {
   description = "Label to identify owner, will be used for tagging resources that are provisioned."
 }
 
-variable ssh_key_name {
-  type        = string
-  description = "Label for SSH key."
-}
-
-variable ssh_public_key {
-  type        = string
-  description = "SSH public key."
+variable ssh_keys {
+  type        = map(string)
+  description = "Mapping of ssh key name and ssh key."
+  default     = {}
 }
